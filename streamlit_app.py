@@ -16,7 +16,7 @@ from streamlit_folium import st_folium
 
 df = pd.read_csv('europe.csv')
 
-m   = folium.Map(location=[54.91, 25.32], zoom=5)
+m   = folium.Map(location=[54.91, 25.32], zoom_start=5)
 
 for row in df:
   folium.Marker(

@@ -18,9 +18,10 @@ df = pd.read_csv('europe.csv')
 m   = folium.Map(location=[54.91, 25.32], zoom_start=3)
 
 for _, row in df.iterrows():
-  linkhtml = f'<h1><a href="https://en.wikipedia.org/wiki/{row['Country'].replace(" ", "_")}">{row['Country']}</a></h1>'
+  linkcountry = row['Country'].replace(" ", "_")
+  linkhtml = f'<h1><a href="https://en.wikipedia.org/wiki/{linkcountry}">{row["Country"]}</a></h1>'
   folium.Marker(
-    [row['Latitude'], row['Longitude']], tooltip="<h2>row['Country']</h2>", popup=linkhtml
+    [row['Latitude'], row['Longitude']], tooltip=f"<h2>{row['Country']}</h2>", popup=linkhtml
   ).add_to(m)
 
 st_data = st_folium(m, width=800)

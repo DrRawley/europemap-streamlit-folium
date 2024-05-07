@@ -16,7 +16,8 @@ from streamlit_folium import st_folium
 
 df = pd.read_csv('europe.csv')
 
-print(df)
+
+st.text(df)
 
 
 

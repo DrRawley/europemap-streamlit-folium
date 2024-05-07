@@ -26,7 +26,7 @@ st_data = st_folium(m, width=800)
 
 for _, row in df.iterrows():
  text = f"\[{row['Country']}\]\(https://en.wikipedia.org/wiki/{row['Country']}\)"
- st.text(text)
+ st.markdown(text)
 
 
 

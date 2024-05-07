@@ -18,7 +18,7 @@ df = pd.read_csv('europe.csv')
 
 m   = folium.Map(location=[54.91, 25.32], zoom_start=5)
 
-for row in df:
+for _, row in df.iterrows():
   folium.Marker(
     [row['Latitude'], row['Longitude']], tooltip=row['Country'], popup=row['Country']
   ).add_to(m)

@@ -19,7 +19,7 @@ m   = folium.Map(location=[54.91, 25.32], zoom_start=3)
 
 for _, row in df.iterrows():
   linkcountry = row['Country'].replace(" ", "_")
-  linkhtml = f'<h1><a href="https://en.wikipedia.org/wiki/{linkcountry}">{row["Country"]}</a></h1>'
+  linkhtml = f'<h1><a href="https://en.wikipedia.org/wiki/{linkcountry}" target="_blank">{row["Country"]}</a></h1>'
   folium.Marker(
     [row['Latitude'], row['Longitude']], tooltip=f"<h2>{row['Country']}</h2>", popup=linkhtml
   ).add_to(m)

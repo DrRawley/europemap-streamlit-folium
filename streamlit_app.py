@@ -24,7 +24,9 @@ for _, row in df.iterrows():
 
 st_data = st_folium(m, width=800)
 
-st.text(df)
+for _, row in df.iterrows():
+ text = f"\[{row['Country']}\]\(https://en.wikipedia.org/wiki/{row['Country']}\)"
+ st.text(text)
 
 
 

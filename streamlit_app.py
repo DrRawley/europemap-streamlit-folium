@@ -5,18 +5,17 @@ import streamlit as st
 import folium
 from streamlit_folium import st_folium
 
-# # center on Liberty Bell, add marker
-# m = folium.Map(location=[39.949610, -75.150282], zoom_start=16)
-# folium.Marker(
-#     [39.949610, -75.150282], popup="Liberty Bell", tooltip="Liberty Bell"
-# ).add_to(m)
+"""
+# European Map with Follium and Streamlit
+[Daily Python Projects](https://dailypythonprojects.substack.com/)
 
-# # call to render Folium map in Streamlit
-# st_data = st_folium(m, width=725)
+[Dr. Rawley's Website](https://drrawley.com)
+"""
+
 
 df = pd.read_csv('europe.csv')
 
-m   = folium.Map(location=[54.91, 25.32], zoom_start=5)
+m   = folium.Map(location=[54.91, 25.32], zoom_start=3)
 
 for _, row in df.iterrows():
   folium.Marker(

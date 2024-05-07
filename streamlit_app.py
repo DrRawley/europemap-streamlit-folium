@@ -15,7 +15,7 @@ from streamlit_folium import st_folium
 
 df = pd.read_csv('europe.csv')
 
-m   = folium.Map(location=[60, 45], zoom_start=2)
+m   = folium.Map(location=[64, 12], zoom_start=3)
 
 for _, row in df.iterrows():
   linkcountry = row['Country'].replace(" ", "_")

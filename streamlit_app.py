@@ -25,7 +25,7 @@ for _, row in df.iterrows():
 st_data = st_folium(m, width=800)
 
 for _, row in df.iterrows():
- text = f"[{row['Country']}](https://en.wikipedia.org/wiki/{row['Country'].replace(" ", "_")})"
+ text = f"[{row['Country']}](https://en.wikipedia.org/wiki/{row['Country'].replace(' ', '_')})"
  st.markdown(text)
 
 
